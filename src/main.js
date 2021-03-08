@@ -1,8 +1,13 @@
 import Vue from "vue";
 import App from "./App.vue";
 import "@/assets/css/tailwind.css";
-import router from '@/router'
 
+import router from "@/router";
+import { dollarFilter, percentFilter } from "@/filters";
+
+//Nos permite registrar un nuevo filtro dentro de nuestra aplicación
+Vue.filter("dollar", dollarFilter);
+Vue.filter("percent", percentFilter);
 Vue.config.productionTip = false;
 
 new Vue({
